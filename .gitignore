@@ -38,7 +38,7 @@ packages
 out
 
 #rider
-/.idea/*
+.idea/*
 
 .fake
 .ionide
