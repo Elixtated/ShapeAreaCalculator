@@ -5,6 +5,8 @@ using System.Linq;
 
 public class Triangle : IShape
 {
+    private const double ComparisonTolerance = 1e-7;
+
     private readonly double firstSideLength;
     private readonly double secondSideLength;
     private readonly double thirdSideLength;
@@ -31,12 +33,12 @@ public class Triangle : IShape
         var halfPerimeter =
             (this.firstSideLength + this.secondSideLength + this.thirdSideLength) / 2;
 
-        var oppositeSideCoefficient = halfPerimeter - this.firstSideLength;
-        var hypotenuseSideCoefficient = halfPerimeter - this.secondSideLength;
-        var adjacentSideCoefficient = halfPerimeter - this.thirdSideLength;
+        var firstSideCoefficient = halfPerimeter - this.firstSideLength;
+        var secondSideCoefficient = halfPerimeter - this.secondSideLength;
+        var thirdSideCoefficient = halfPerimeter - this.thirdSideLength;
 
         var area = Math.Sqrt(
-            halfPerimeter * oppositeSideCoefficient * hypotenuseSideCoefficient * adjacentSideCoefficient);
+            halfPerimeter * firstSideCoefficient * secondSideCoefficient * thirdSideCoefficient);
 
         return area;
     }
@@ -50,8 +52,10 @@ public class Triangle : IShape
         var longestSideSquare = longestSide * longestSide;
 
         return
-            Math.Abs(longestSideSquare + longestSideSquare - (this.thirdSideLength * this.thirdSideLength +
-                this.secondSideLength * this.secondSideLength + this.firstSideLength *
-                this.firstSideLength)) < Constants.ComparisonTolerance;
+            Math.Abs(
+                longestSideSquare + longestSideSquare
+                - (this.firstSideLength * this.firstSideLength +
+                    this.secondSideLength * this.secondSideLength +
+                    this.thirdSideLength * this.thirdSideLength)) < ComparisonTolerance;
     }
 }

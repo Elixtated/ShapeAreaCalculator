@@ -1,8 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeAreaCalculator", "ShapeAreaCalculator\ShapeAreaCalculator.csproj", "{4F6DD76E-91C3-4752-82E1-1CB24369095A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeAreaCalculator", "Public\ShapeAreaCalculator\ShapeAreaCalculator.csproj", "{4F6DD76E-91C3-4752-82E1-1CB24369095A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeAreaCalculator.Tests", "ShapeAreaCalculator.Tests\ShapeAreaCalculator.Tests.csproj", "{C9824032-4B54-4657-8D9F-A85C7B7C54D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeAreaCalculator.SyncClient", "Public\ShapeAreaCalculator.SyncClient\ShapeAreaCalculator.SyncClient.csproj", "{CFB5E24B-4BC0-4C07-A7C0-A81FCE86275B}"
+EndProjec
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeAreaCalculator.Tests", "Tests\ShapeAreaCalculator.Tests\ShapeAreaCalculator.Tests.csproj", "{C9824032-4B54-4657-8D9F-A85C7B7C54D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeAreaCalculator.UseCases", "Private\ShapeAreaCalculator.UseCases\ShapeAreaCalculator.UseCases.csproj", "{C6411C0B-D655-4F4F-B71C-156C96F201D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Private", "Private", "{B7ECF0EB-91A2-43BE-A371-3E581D288AEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Public", "Public", "{916D3B91-55BF-40DD-825D-86CE59689C14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2883BB6F-CF46-4A0F-838E-DC4D0C69E541}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +28,19 @@ Global
 		{C9824032-4B54-4657-8D9F-A85C7B7C54D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9824032-4B54-4657-8D9F-A85C7B7C54D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9824032-4B54-4657-8D9F-A85C7B7C54D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6411C0B-D655-4F4F-B71C-156C96F201D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6411C0B-D655-4F4F-B71C-156C96F201D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6411C0B-D655-4F4F-B71C-156C96F201D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6411C0B-D655-4F4F-B71C-156C96F201D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB5E24B-4BC0-4C07-A7C0-A81FCE86275B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB5E24B-4BC0-4C07-A7C0-A81FCE86275B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB5E24B-4BC0-4C07-A7C0-A81FCE86275B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB5E24B-4BC0-4C07-A7C0-A81FCE86275B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F6DD76E-91C3-4752-82E1-1CB24369095A} = {916D3B91-55BF-40DD-825D-86CE59689C14}
+		{C9824032-4B54-4657-8D9F-A85C7B7C54D9} = {2883BB6F-CF46-4A0F-838E-DC4D0C69E541}
+		{C6411C0B-D655-4F4F-B71C-156C96F201D6} = {B7ECF0EB-91A2-43BE-A371-3E581D288AEA}
+		{CFB5E24B-4BC0-4C07-A7C0-A81FCE86275B} = {916D3B91-55BF-40DD-825D-86CE59689C14}
 	EndGlobalSection
 EndGlobal

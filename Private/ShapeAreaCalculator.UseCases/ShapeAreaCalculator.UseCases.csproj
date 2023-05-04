@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+            <_Parameter1>ShapeAreaCalculator.SyncClient</_Parameter1>
+        </AssemblyAttribute>
+        
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\Public\ShapeAreaCalculator\ShapeAreaCalculator.csproj" />
+    </ItemGroup>
+</Project>

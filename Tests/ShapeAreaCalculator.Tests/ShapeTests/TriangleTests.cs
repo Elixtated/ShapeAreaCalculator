@@ -1,12 +1,27 @@
-namespace ShapeAreaCalculator.Tests;
+namespace ShapeAreaCalculator.Tests.ShapeTests;
 
 using System;
 using FluentAssertions;
-using global::ShapeAreaCalculator.Shapes;
+using ShapeAreaCalculator.Shapes;
 using Xunit;
 
 public class TriangleTests
 {
+    [Fact]
+    public void ShouldCalculateTriangleArea()
+    {
+        var sut = new Triangle(
+            firstSideLength: 3,
+            secondSideLength: 4,
+            thirdSideLength: 5);
+
+        var result = sut.CalculateArea();
+
+        result
+            .Should()
+            .Be(6);
+    }
+
     [Fact]
     public void TriangleShouldBeRightAngle()
     {
